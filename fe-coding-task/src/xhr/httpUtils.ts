@@ -56,7 +56,7 @@ export const POST = (
     method: "POST",
   });
 
-// DISCLAIMER: Below ones are not needed at this point to meet the business needs, but for the case of showing general set up, its especially good if we had some headers to be constantly added like x-api-key, or auth bearer token:
+// IMPORTANT: Below ones are not needed at this point to meet the business needs, but for the case of showing general set up, its especially good if we had some headers to be constantly added like x-api-key, or auth bearer token:
 // export const GET = (url: RequestInfo | URL, options?: RequestInit) =>
 //   interceptedFetch(url, {
 //     ...options,

@@ -1,5 +1,5 @@
-import { ToastContainer } from "react-toastify";
+import { StyledToastSnackbar } from "./styles";
 
 export const ToastSnackbar = () => {
-  return <ToastContainer position="bottom-center" />;
+  return <StyledToastSnackbar position="bottom-center" />;
 };

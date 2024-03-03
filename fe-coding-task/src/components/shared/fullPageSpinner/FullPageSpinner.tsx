@@ -4,7 +4,7 @@ interface FullPageSpinnerI {
   isLoading: boolean;
 }
 
-// DISCLAIMER: normally I would build a spinner that takes children, so it works as a wrapper, but for this case I like the full page general one.
+// IMPORTANT: normally I would build a spinner that takes children, so it works as a wrapper, but for this case I like the full page general one.
 export const FullPageSpinner = ({ isLoading }: FullPageSpinnerI) => {
   if (!isLoading) return null;
 

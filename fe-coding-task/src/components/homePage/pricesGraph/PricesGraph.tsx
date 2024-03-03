@@ -36,7 +36,7 @@ export const PricesGraph = ({ data }: PricesGraphI) => {
         <YAxis
           name="Price"
           label={{
-            value: "Price [NOK]",
+            value: "Price [NOK] / m2",
             angle: -90,
             position: "insideLeft",
             offset: -5,
@@ -58,7 +58,7 @@ export const PricesGraph = ({ data }: PricesGraphI) => {
 const CustomizedLegend = () => {
   return (
     <span>
-      <b>Prices of m2 over time</b>
+      <b>Average prices of m2 over time</b>
     </span>
   );
 };
@@ -74,7 +74,7 @@ const CustomTooltip = ({
         <p>
           <b>{`Date: ${label}`}</b>
         </p>
-        <StyledTooltipValue>{`Price: ${payload[0].value} NOK for m2`}</StyledTooltipValue>
+        <StyledTooltipValue>{`Price: ${payload[0].value} NOK / m2`}</StyledTooltipValue>
       </div>
     );
   }
