@@ -2,6 +2,7 @@ import { NavigateFunction } from "react-router-dom";
 import { PostHouseParametersRequestDTO } from "../../../services/dto/SSBService.dto";
 import { FormParams } from "./types";
 import { UseFormSetError } from "react-hook-form";
+import { STARTING_YEAR } from "./const";
 
 function generateQuarters(
   startYear: string,
@@ -66,7 +67,7 @@ export const updateURL = (
 };
 
 export const validateYear = (value: string) => {
-  return +value >= 2019 && +value < new Date().getFullYear();
+  return +value >= STARTING_YEAR && +value < new Date().getFullYear();
 };
 
 // validates whether end date is not earlier than starting date in filter

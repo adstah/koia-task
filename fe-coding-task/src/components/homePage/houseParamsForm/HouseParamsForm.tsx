@@ -11,7 +11,7 @@ import {
   Typography,
 } from "@mui/material";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
-import { HOUSING_TYPES, QUARTERS, SSB_TABLE } from "./const";
+import { HOUSING_TYPES, QUARTERS, SSB_TABLE, STARTING_YEAR } from "./const";
 import { useSSBService } from "../../../services/SSBServiceProvider";
 import { FormParams } from "./types";
 import { ConfirmationDialog } from "../../shared/confirmationDialog/ConfirmationDialog";
@@ -168,14 +168,17 @@ export const HouseParamsForm = ({ setPriceStatistics }: HouseParamsFormI) => {
       )}
       {(errors.endYear || errors.startYear) && (
         <Typography color="error">
-          Years less than 2019 and greater than the current date are not
-          allowed.
+          {`Years less than ${STARTING_YEAR} and greater than the current date are not
+          allowed.`}
         </Typography>
       )}
       {errors.root && (
         <Typography color="error">
           {'"Until" cannot be earlier than "Starting from"'}
         </Typography>
+      )}
+      {errors.houseType && (
+        <Typography color="error">House type cannot be empty</Typography>
       )}
       <Button type="submit" variant="contained">
         Submit

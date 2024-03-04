@@ -23,7 +23,7 @@ export const PricesGraph = ({ data }: PricesGraphI) => {
   const theme = useTheme();
   return (
     <ResponsiveContainer width="100%" height={400}>
-      <StyledLineChart data={processedData}>
+      <StyledLineChart data={processedData} margin={{ left: 10 }}>
         <XAxis
           dataKey="timestamp"
           name="Quarter"
